@@ -13,11 +13,11 @@
         <header>
             <nav>
                 <a href="/" class="nav-link">Home</a>
-                
+
                 <a href="/dashboard" class="nav-link">Dashboard</a>
-                
-                <a href="/login">login</a>
-                
+
+                <a href="/login">Login</a>
+
             </nav>
             <div class="title-container">
                 <h1>The Tech Blog</h1>
@@ -27,8 +27,10 @@
             {{{ body }}}
         </main>
     </div>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 
-  
 </body>
 
 </html>
