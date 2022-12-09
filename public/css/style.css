@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+    background-color: rgb(190, 213, 190);
+  }
+  
+  nav {
+    display: flex;
+    padding: 30px 30px 5px 7px;
+  }
+
+  .nav-link {
+    margin-right: 15px;
+  }
+
+  .user-info {
+    float: right;
+  }
+
+  .post-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  textarea, input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  
+
+ 
