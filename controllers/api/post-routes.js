@@ -76,6 +76,7 @@ router.post('/', withAuth, async (req, res) => {
             description: req.body.description,
             user_id: req.session.user_id
         });
+        console.log("post data",postData)
         res.status(200).json(postData)
     } catch (err) {
         res.status(500).json(err)
