@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, async (req, res) => {
 
     try {
-        console.log("req",req.session)
+        console.log("req", req.session)
         const postData = await Post.findAll({
             attributes: [
                 'id',
@@ -32,9 +32,9 @@ router.get('/', withAuth, async (req, res) => {
 
         const posts = postData.map(post => post.get({ plain: true }));
         res.render('dashboard', {
-             posts
-             , loggedIn: req.session.logged_in 
-            });
+            posts
+            , loggedIn: req.session.logged_in
+        });
     } catch (err) {
         res.status(500).json(err)
     }
@@ -73,7 +73,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
             res.render('edit-post', {
                 post,
-                loggedIn: true
+                loggedIn: req.session.logged_in
             });
         };
 

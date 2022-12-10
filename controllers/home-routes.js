@@ -72,7 +72,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
             res.render('one-post', {
                 post,
-                loggedIn: req.session.loggedIn
+                loggedIn: req.session.logged_in
             });
         };
 
