@@ -70,7 +70,6 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', withAuth, async (req, res) => {
-    console.log("jingle jangle line 73")
     try {
         const postData = Post.create({
             title: req.body.title,
@@ -85,7 +84,6 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 router.put('/:id', withAuth, async (req, res) => {
-    console.log("jingle jangle line 88")
     try {
         const postData = Post.update(
             {
